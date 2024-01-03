@@ -1,0 +1,116 @@
+<!-- <h1>Hello user</h1> -->
+{% load static %}
+<title>Heart Care</title>
+<link rel="shortcut icon" type="image/png" href="{% static 'heart.png' %}">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'predictStyle.css' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap' %}" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<div class="content">
+
+    
+    <form action="predictD" method="POST">
+        {% csrf_token %}
+        <div class="user-details">
+        <div class="input-box">
+           <span class="details">Age:</span>
+            <input type="text" name="age" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">Sex:</span>
+           <span class="details">0 for Female & 1 for Male</span>
+            <input type="text" name="sex" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">CP:</span>
+            <input type="text" name="cp" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">Blood Pressure:</span>
+            <input type="text" name="bp" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">Restecg:</span>
+            <input type="text" name="restecg" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">Max Heart Rate:</span>
+            <input type="text" name="thalas" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">exang:</span>
+            <input type="text" name="exang" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">ST Depression:</span>
+            <input type="text" name="oldpeak" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">slope:</span>
+            <input type="text" name="slope" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">ca:</span>
+            <input type="text" name="ca" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">thal:</span>
+            <input type="text" name="thal" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">HRmedian:</span>
+            <input type="text" name="hrmedian" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">HRmean:</span>
+            <input type="text" name="hrmean" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">PR Interval median:</span>
+            <input type="text" name="printervalmedian" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">PR Interval mean:</span>
+            <input type="text" name="printervalmean" required/>
+        </div>
+        <div class="input-box">
+            
+           <span class="details">RR Interval median:</span>
+            <input type="text" name="qtcbmedian" required/>
+        </div>
+        <div class="input-box">
+
+           <span class="details">RR Interval mean:</span>
+            <input type="text" name="qtcbmean" required/>
+        </div>
+        <div class="input-box">
+           <span class="details">RR Interval sd:</span>
+            <input type="text" name="qtcbsd" required/>
+        </div>
+        </div>
+        <!-- <button type="button" onclick="location.href='predictd'"> Click Here </button> -->
+        <div class="button">
+            <input type="submit" value="Predict"/>
+        </div>
+    </form>
+</div>
+</div>    
+</body>

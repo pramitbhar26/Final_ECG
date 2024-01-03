@@ -1,0 +1,15 @@
+ {% load static %}  
+ <!-- <h1>{{ans}}</h1>  -->
+ <title>Heart Care</title>
+<link rel="shortcut icon" type="image/png" href="{% static 'heart.png' %}">
+    {% if '{{ans}} >= 1' %}
+    <h1>Person has Heart Disease</h1>
+    {% else %}
+    <h1>Person has good heart</h1>
+    {% endif %}
+
+<div>
+    <!-- <h2>do you want to back to predict page?</h2> -->
+    <button type="button" onclick="location.href='predict'">BackToPreviousPage</button>
+    <button type="button" onclick="location.href='/'">BackToHomePage</button>
+</div>    

@@ -1,0 +1,21 @@
+{% load static %}
+<title>Heart Care</title>
+<link rel="shortcut icon" type="image/png" href="{% static 'heart.png' %}">
+<h1>Login Now</h1>
+<style>
+h3{
+color: red;
+}
+</style>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+<form action="login" method="POST">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username"/>
+    <p>Password:</p>
+    <input type="password" name="password"/><br>
+    <a href="register">If you don't have an account?</a><br>
+    <input type="submit" value="Submit"/>
+</form>
